@@ -13,8 +13,8 @@ namespace CarsUnlimited.CartAPI.Tests
     [TestClass]
     public class GetCartItemsTests
     {
-        Mock<IRedisCacheClient> _mockIRedisCacheClient;
-        Mock<ILogger<UpdateCartService>> _mockILogger;
+        Mock<IRedisCacheClient> _mockIRedisCacheClient = null!;
+        Mock<ILogger<UpdateCartService>> _mockILogger = null!;
         
 
         [TestInitialize]

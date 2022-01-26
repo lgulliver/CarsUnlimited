@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarsUnlimited.InventoryShar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarsUnlimited.CartAPI.Tests", "CarsUnlimited.CartAPI.Tests\CarsUnlimited.CartAPI.Tests.csproj", "{00405F96-D71F-4475-8D3D-285BDFE25742}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarsUnlimited.InventoryAPI.Tests", "CarsUnlimited.InventoryAPI.Tests\CarsUnlimited.InventoryAPI.Tests.csproj", "{9F8C3CEE-D4A0-4C30-926B-6D94DD6DDF9E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +155,18 @@ Global
 		{00405F96-D71F-4475-8D3D-285BDFE25742}.Release|x64.Build.0 = Release|Any CPU
 		{00405F96-D71F-4475-8D3D-285BDFE25742}.Release|x86.ActiveCfg = Release|Any CPU
 		{00405F96-D71F-4475-8D3D-285BDFE25742}.Release|x86.Build.0 = Release|Any CPU
+		{9F8C3CEE-D4A0-4C30-926B-6D94DD6DDF9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F8C3CEE-D4A0-4C30-926B-6D94DD6DDF9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F8C3CEE-D4A0-4C30-926B-6D94DD6DDF9E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9F8C3CEE-D4A0-4C30-926B-6D94DD6DDF9E}.Debug|x64.Build.0 = Debug|Any CPU
+		{9F8C3CEE-D4A0-4C30-926B-6D94DD6DDF9E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9F8C3CEE-D4A0-4C30-926B-6D94DD6DDF9E}.Debug|x86.Build.0 = Debug|Any CPU
+		{9F8C3CEE-D4A0-4C30-926B-6D94DD6DDF9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F8C3CEE-D4A0-4C30-926B-6D94DD6DDF9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F8C3CEE-D4A0-4C30-926B-6D94DD6DDF9E}.Release|x64.ActiveCfg = Release|Any CPU
+		{9F8C3CEE-D4A0-4C30-926B-6D94DD6DDF9E}.Release|x64.Build.0 = Release|Any CPU
+		{9F8C3CEE-D4A0-4C30-926B-6D94DD6DDF9E}.Release|x86.ActiveCfg = Release|Any CPU
+		{9F8C3CEE-D4A0-4C30-926B-6D94DD6DDF9E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

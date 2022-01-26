@@ -16,14 +16,13 @@ namespace CarsUnlimited.CartAPI.Tests
     [TestClass]
     public class CartServiceTests
     {
-        Mock<IRedisCacheClient> _mockIRedisCacheClient;
-        Mock<ILogger<UpdateCartService>> _mockILogger;
-        Mock<IConfiguration> _mockIConfiguration;
-        Mock<IGetCartItems> _mockGetCartItems;
-        Mock<IConnectionFactory> _mockIConnectionFactory;
-        Mock<IConnection> _mockIConnection;
-        Mock<IModel> _mockIModel;
-
+        Mock<IRedisCacheClient> _mockIRedisCacheClient = null!;
+        Mock<ILogger<UpdateCartService>> _mockILogger = null!;
+        Mock<IConfiguration> _mockIConfiguration = null!;
+        Mock<IGetCartItems> _mockGetCartItems = null!;
+        Mock<IConnectionFactory> _mockIConnectionFactory = null!;
+        Mock<IConnection> _mockIConnection = null!;
+        Mock<IModel> _mockIModel = null!;
 
         [TestInitialize]
         public void Initialise()

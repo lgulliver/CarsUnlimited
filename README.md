@@ -12,6 +12,7 @@ It is a work in progress.
 - [ ] TODO - Instructions on how to locally debug Each API
 - [ ] TODO - Instructions around Testing via Docker
 
+
 ## Overview
 
 ![Cars Unlimited](/docs/CarsUnlimitedv2.png)
@@ -32,6 +33,9 @@ This is a list of technologies used (or intended to be used).
 - Grafana
 - Kiali
 - Golang
+
+## Docker Compose
+Docker compose is to be used for local dev testing. The compose files are aplit up between the master docker-compose.yml file which contains all services and dependencies to spin up the full service. There are individual compose files the spin up individual services plus their dependencies for testing in isolation.
 
 ## Useful Links
 
