@@ -4,35 +4,46 @@ This project is to replace v1 of Cars Unlimited used in Docker, Azure DevOps and
 
 It is a work in progress.
 
-## Pre-Requisites
-
-- [ ] TODO - Add instructions regarding Mongo installation (consider adding this into a one off setup script that can be ran by new users)
-- [ ] TODO - Test URLs for Swagger
-- [ ] TODO - Test scenarios that can be ran in Postman
-- [ ] TODO - Instructions on how to locally debug Each API
-- [ ] TODO - Instructions around Testing via Docker
-
-## Overview
+# Overview
 
 ![Cars Unlimited](/docs/CarsUnlimitedv2.png)
 
-## Technologies
+- .NET 5 is used for:
+    - Inventory API
+    - Inventory Worker
+    - Cart API
+    - Cart Worker
+- Golang is used for:
+    - Purchase API
+- MongoDB is used for:
+    - Inventory data    
+- Redis is used for:
+    - Cart data
+- Docker is used for:
+    - Inventory
+    - Purchase
+    - Cart
+    - The UI does not presently use Docker
+- React is used for:
+    - The Web Front End client
 
-This is a list of technologies used (or intended to be used).
+Not in this diagram is some supporting local services such as:
 
-- Docker
-- Kubernetes
-- Blazor Server
-- Xamarin
-- Kong API Gateway
-- MongoDB
-- Redis
-- .NET 5
-- Prometheus
-- Grafana
-- Kiali
-- Golang
+- Jaeger for Open Telemetry (see: [Configuring Telemetry](/docs/ConfiguringTelemetry.md))
 
+# Open API
+
+Open API is enabled on all services with the exception of the Purchase API at this time.
+
+When running locally either in debug or with Docker/Docker Compose, you can access the Open API interface under `/swagger`
+
+# Configuration
+
+- [Configuring Telemetry](/docs/ConfiguringTelemetry.md)
+- [Configuring Inventory API and Worker](/docs/ConfiguringInventoryAPI.md)
+- [Configuring Cart API and Worker](/docs/ConfiguringCartAPI.md)
+- [Configuring Purchase API](/docs/ConfiguringPurchaseAPI.md)
+- [Configuring Web Client](/docs/ConfiguringWebClient.md)
 ## Useful Links
 
 - [Cars Unlimited v1](https://github.com/MMTDigital/CarsUnlimited)
