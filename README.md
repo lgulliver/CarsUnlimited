@@ -31,6 +31,8 @@ Not in this diagram is some supporting local services such as:
 
 - Jaeger for Open Telemetry (see: [Configuring Telemetry](/docs/ConfiguringTelemetry.md))
 
+**NOTE:** Jaeger is currently only used locally and in docker compose, but telemetry is configured to output to console by default.
+
 # Open API
 
 Open API is enabled on all services with the exception of the Purchase API at this time.
@@ -44,6 +46,16 @@ When running locally either in debug or with Docker/Docker Compose, you can acce
 - [Configuring Cart API and Worker](/docs/ConfiguringCartAPI.md)
 - [Configuring Purchase API](/docs/ConfiguringPurchaseAPI.md)
 - [Configuring Web Client](/docs/ConfiguringWebClient.md)
-## Useful Links
+# Useful Links
 
 - [Cars Unlimited v1](https://github.com/MMTDigital/CarsUnlimited)
+
+# Getting Started Locally
+
+## Docker Compose
+
+There are several docker compose files in this repository. Navigating to the `/src` directory and running `docker compose up --build` will bring up all services, components and dependencies, with the exception of the UI.
+
+## Web UI
+
+Navigate to the UI project and run `npm start .env.development` to start the UI locally. Once the UI is running, you can navigate to `http://localhost:3000` to see the UI.
