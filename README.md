@@ -52,6 +52,13 @@ When running locally either in debug or with Docker/Docker Compose, you can acce
 
 # Getting Started Locally
 
+You will need the following:
+
+- Docker
+- .NET 5
+- Node 14.x
+- Go 1.16 or better
+
 ## Docker Compose
 
 There are several docker compose files in this repository. Navigating to the `/src` directory and running `docker compose up --build` will bring up all services, components and dependencies, with the exception of the UI.
@@ -59,3 +66,7 @@ There are several docker compose files in this repository. Navigating to the `/s
 ## Web UI
 
 Navigate to the UI project and run `npm start .env.development` to start the UI locally. Once the UI is running, you can navigate to `http://localhost:3000` to see the UI.
+
+## Seeding data
+
+The supplied MongoDB container automatically seeds data. It's used by the Inventory API and will be displayed in the UI once present.
