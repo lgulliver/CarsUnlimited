@@ -1,8 +1,8 @@
-# Configuring Inventory API and Worker
+# Configuring Cart API and Worker
 
 # API
 
-These settings can be overridden with environment variables.
+All configuration can be overridden with environment vars.
 
 ## Default Configuration
 
@@ -16,14 +16,23 @@ These settings can be overridden with environment variables.
     }
   },
   "AllowedHosts": "*",
-  "InventoryDatabaseSettings": {
-    "ConnectionString": "mongodb://localhost:27017",
-    "DatabaseName": "CarsUnlimitedDb"
-  },
   "TracingConfiguration": {
-    "Exporter": -1
+    "JaegerEndpoint": {
+      "Host": "localhost",
+      "Port": 6831
+    }
   },
-  "InventoryApiKey": "THIS_IS_MY_KEY"
+  "RedisSettings": {
+    "Host": "localhost",
+    "Port": 6379,
+    "Ssl": false,
+    "Password": ""
+  },
+  "ServiceBusConfiguration": {
+    "HostName": "localhost",
+    "UserName": "user",
+    "Password": "user"
+  }
 }
 ```
 
@@ -45,28 +54,24 @@ Logging uses the default .NET logging options. Please see [Configuring logging](
 
 See [Configuring Telemetry](ConfiguringTelemetry.md) for more information.
 
-## Inventory Database Settings
+## Redis Settings
 
 | Property | Description | Default Value |
 | -------- | ----------- | ------------- |
-| ConnectionString | Connection string to the MongoDB database | mongodb://localhost:27017 |
-| DatabaseName | Name of the MongoDB database | CarsUnlimitedDb |
+| Host | Hostname of the Redis server | localhost |
+| Port | Port of the Redis server | 6379 |
+| Ssl | Whether to use SSL to connect to the Redis server | false |
+| Password | Password to use when connecting to the Redis server | "" |
 
-The `ConnectionString` is used to connect to the MongoDB database. The `DatabaseName` is used to specify the name of the database.
+## Service Bus Configuration
 
-Change the `ConnectionString` to connect to your MongoDB instance when deploying.
-
-## Inventory API Key
-
-The `InventoryApiKey` is the value needed by other components to authenticate the Inventory API.
-
-This can be left as this value for now.
-
-__Note:__ This is not the best way to do this and in future it will be replaced with a more secure method.
+| Property | Description | Default Value |
+| -------- | ----------- | ------------- |
+| HostName | Hostname of the Service Bus | localhost |
+| UserName | Username to use when connecting to the Service Bus | user |
+| Password | Password to use when connecting to the Service Bus | user |
 
 # Worker
-
-These settings can be overridden with environment variables.
 
 ## Default Configuration
 
@@ -84,8 +89,8 @@ These settings can be overridden with environment variables.
     "UserName": "user",
     "Password": "user"
   },
-  "InventoryApiUrl": "http://localhost:5010/api/Inventory/",
-  "InventoryApiKey": "THIS_IS_MY_KEY"
+  "CartApiUrl": "http://localhost:5020/api/Cart/",
+  "CartApiKey": "THIS_IS_MY_KEY"
 }
 ```
 
@@ -105,10 +110,10 @@ The `ServiceBusConfiguration` section is used to configure the connection to the
 | UserName | User name to connect to the Service Bus | user |
 | Password | Password to connect to the Service Bus | user |
 
-## Inventory API Url
+## Cart API Url
 
-This is the full qualified URL to the Inventory API.
+This is the full qualified URL to the Cart API.
 
-## Inventory API Key
+## Cart API Key
 
 This is the API key specified in the app settings for the API. It *must* match the API key specified in the app settings for the API.
