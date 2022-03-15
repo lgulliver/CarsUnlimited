@@ -111,6 +111,8 @@ namespace CarsUnlimited.CartAPI
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Cars Unlimited Cart API", Version = "v1" });
             });
+
+            services.AddHealthChecks();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -133,6 +135,7 @@ namespace CarsUnlimited.CartAPI
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHealthChecks("/healthz");
             });
         }
     }
