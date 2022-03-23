@@ -22,7 +22,7 @@ const addItemToCart = async ({ id, price }: AddToCartProps) => {
 
   const cartItem = { id: id, price: price, count: 1 };
   
-  await axios.post(`${API_URL}/Cart/add-to-cart`, cartItem, { headers })                             
+  await axios.post(`${API_URL}/cart/add-to-cart`, cartItem, { headers })                             
               .catch(error => {
                 console.error('An error occurred!', error);
               });

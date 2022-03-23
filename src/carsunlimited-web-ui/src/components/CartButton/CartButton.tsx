@@ -12,7 +12,7 @@ const headers = {
 }
 
 const getCardItemCount = async () => {
-  const response = await axios.get(`${API_URL}/Cart/get-cart-items-count`, { headers })
+  const response = await axios.get(`${API_URL}/cart/get-cart-items-count`, { headers })
   return response.data
 }
 

@@ -16,7 +16,7 @@ const INVENTORY_API_URL = process.env.REACT_APP_INVENTORY_API_URL;
 const CART_API_URL = process.env.REACT_APP_CART_API_URL;
 
 const getInventoryItem = async (id: string) => {
-  const response = await axios.get(`${INVENTORY_API_URL}/Inventory/${id}`);
+  const response = await axios.get(`${INVENTORY_API_URL}/inventory/${id}`);
   return response.data;
 };
 
@@ -30,7 +30,7 @@ const deleteItemFromCart = async (id: string) => {
     'X-CarsUnlimited-SessionId': sessionId
   }
 
-  await axios.get(`${CART_API_URL}/Cart/delete-item-from-cart?id=${id}`, { headers })
+  await axios.get(`${CART_API_URL}/cart/delete-item-from-cart?id=${id}`, { headers })
               .catch(error => {
                 console.error('An error occurred!', error);
               });

@@ -16,7 +16,7 @@ const API_URL = process.env.REACT_APP_INVENTORY_API_URL;
 
 const fetchLatestProducts = async (category: string) => {
   const response = await axios.get(
-    `${API_URL}/Inventory/${category}/latest`
+    `${API_URL}/inventory/${category}/latest`
   );
   return response.data;
 };
