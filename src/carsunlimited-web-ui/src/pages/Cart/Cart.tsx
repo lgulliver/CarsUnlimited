@@ -20,7 +20,7 @@ const headers = {
 }
 
 const fetchCartItems = async () => {
-  const response = await axios.get(`${CART_API_URL}/Cart/get-cart-items`, { headers })
+  const response = await axios.get(`${CART_API_URL}/cart/get-cart-items`, { headers })
   return response.data
 }
 
@@ -78,7 +78,7 @@ const clearCart = async () => {
     'X-CarsUnlimited-SessionId': sessionId
   }
 
-  await axios.get(`${CART_API_URL}/Cart/delete-cart`, { headers })
+  await axios.get(`${CART_API_URL}/cart/delete-cart`, { headers })
               .catch(error => {
                 console.error('An error occurred!', error);
               });
