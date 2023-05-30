@@ -1,4 +1,5 @@
 {
     "cmake.configureOnOpen": false,
-    "go.inferGopath": false
+    "go.inferGopath": false,
+    "sarif-viewer.connectToGithubCodeScanning": "off"
 }
