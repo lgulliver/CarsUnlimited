@@ -4,14 +4,17 @@ on:
   push:
     branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main" ]    
+
+defaults:
+  run:
+    working-directory: ./src/CarsUnlimited-Purchase-API
 
 jobs:
 
   build:
 
-    runs-on: ubuntu-latest
-    working-directory: ./src/CarsUnlimited-Purchase-API
+    runs-on: ubuntu-latest    
 
     steps:
     - uses: actions/checkout@v3
