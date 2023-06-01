@@ -1,0 +1,24 @@
+name: Cart API CI
+
+on:
+  push:
+    branches: [ "main", "feature/*" ]
+    paths:
+      - 'src/CarsUnlimited.Cart.API/**'
+  pull_request:
+    branches: [ "main" ]    
+
+defaults:
+  run:
+    working-directory: src/CarsUnlimited.Cart.API
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest    
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag cart-api:$(date +%s)
