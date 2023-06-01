@@ -1,0 +1,22 @@
+name: Purchase API CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]    
+
+defaults:
+  run:
+    working-directory: ./src/CarsUnlimited-Purchase-API
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest    
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag purchase-api:$(date +%s)
