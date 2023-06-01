@@ -2,13 +2,15 @@ name: Cart API CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "feature/*" ]
+    paths:
+      - 'src/CarsUnlimited.Cart.API/**'
   pull_request:
     branches: [ "main" ]    
 
 defaults:
   run:
-    working-directory: ./src/CarsUnlimited.Cart.API
+    working-directory: src/CarsUnlimited.Cart.API
 
 jobs:
 
