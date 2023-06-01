@@ -3,6 +3,8 @@ name: Purchase API CI
 on:
   push:
     branches: [ "main" ]
+    paths:
+      - 'src/CarsUnlimited-Purchase-API/**'    
   pull_request:
     branches: [ "main" ]    
 
