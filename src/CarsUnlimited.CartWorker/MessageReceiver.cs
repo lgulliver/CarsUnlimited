@@ -22,7 +22,7 @@ namespace CarsUnlimited.CartWorker
             _configuration = configuration;
         }
 
-        public override async void HandleBasicDeliver(string consumerTag, ulong deliveryTag, bool redelivered, string exchange, string routingKey, IBasicProperties properties, ReadOnlyMemory<byte> body)
+        public override void HandleBasicDeliver(string consumerTag, ulong deliveryTag, bool redelivered, string exchange, string routingKey, IBasicProperties properties, ReadOnlyMemory<byte> body)
         {
             Console.WriteLine($"Consuming Message");
             Console.WriteLine(string.Concat("Message received from the exchange ", exchange));
@@ -45,7 +45,7 @@ namespace CarsUnlimited.CartWorker
                 var msg = JsonSerializer.Deserialize<Dictionary<string, string>>(message);
                 var sId = msg.Values.FirstOrDefault();
 
-                var completeCartTask = await client.PostAsync("complete-cart", new StringContent(sId));
+                var completeCartTask = client.PostAsync("complete-cart", new StringContent(sId)).GetAwaiter().GetResult();
 
                 if (completeCartTask != null)
                 {

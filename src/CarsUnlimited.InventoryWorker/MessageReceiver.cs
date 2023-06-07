@@ -17,7 +17,7 @@ namespace CarsUnlimited.InventoryWorker
             _configuration = configuration;
         }
 
-        public override async void HandleBasicDeliver(string consumerTag, ulong deliveryTag, bool redelivered, string exchange, string routingKey, IBasicProperties properties, ReadOnlyMemory<byte> body)
+        public override void HandleBasicDeliver(string consumerTag, ulong deliveryTag, bool redelivered, string exchange, string routingKey, IBasicProperties properties, ReadOnlyMemory<byte> body)
         {
             Console.WriteLine($"Consuming Message");
             Console.WriteLine(string.Concat("Message received from the exchange ", exchange));
@@ -37,7 +37,7 @@ namespace CarsUnlimited.InventoryWorker
                 client.BaseAddress = new Uri(apiBaseUrl);
                 client.DefaultRequestHeaders.Add("X-CarsUnlimited-InventoryApiKey", apiKey);
 
-                var completeCartTask = await client.PutAsync("update-stock", new StringContent(message, Encoding.UTF8, "application/json"));
+                var completeCartTask = client.PutAsync("update-stock", new StringContent(message, Encoding.UTF8, "application/json")).GetAwaiter().GetResult();
 
                 if (completeCartTask != null)
                 {
