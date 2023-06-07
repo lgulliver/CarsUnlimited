@@ -4,7 +4,7 @@ on:
   push:
     branches: [ "main", "feature/**" ]
     paths:
-      - 'src/CarsUnlimited-Purchase-API/**'
+      - './src/CarsUnlimited-Purchase-API/**'
   pull_request:
     branches: [ "main" ]    
 
