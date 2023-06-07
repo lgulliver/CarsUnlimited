@@ -6,11 +6,13 @@ on:
     paths:
       - 'src/CarsUnlimited.CartAPI/**'
   pull_request:
-    branches: [ "main" ]    
+    branches: [ "main" ]   
+    paths:
+      - 'src/CarsUnlimited.CartAPI/**' 
 
 defaults:
   run:
-    working-directory: ./src/CarsUnlimited.Cart.API
+    working-directory: ./src/CarsUnlimited.CartAPI
 
 jobs:
 
