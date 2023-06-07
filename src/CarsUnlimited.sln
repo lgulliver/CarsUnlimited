@@ -17,8 +17,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarsUnlimited.CartShared", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarsUnlimited.InventoryWorker", "CarsUnlimited.InventoryWorker\CarsUnlimited.InventoryWorker.csproj", "{9A959EFC-5ED4-4B34-9892-AA4ED0478AFD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarsUnlimited.Web", "CarsUnlimited.Web\CarsUnlimited.Web.csproj", "{C13BA7EE-234C-40F4-AD83-DD63877D0ECA}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarsUnlimited.InventoryShared", "CarsUnlimited.InventoryShared\CarsUnlimited.InventoryShared.csproj", "{2A623B8A-D092-4C57-A15C-FE8EBF5A513B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarsUnlimited.CartAPI.Tests", "CarsUnlimited.CartAPI.Tests\CarsUnlimited.CartAPI.Tests.csproj", "{00405F96-D71F-4475-8D3D-285BDFE25742}"
