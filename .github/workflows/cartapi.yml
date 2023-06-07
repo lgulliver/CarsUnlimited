@@ -2,9 +2,9 @@ name: Cart API CI
 
 on:
   push:
-    branches:
-      - main
-      - 'feature/**'
+    branches: [ "main", "feature/**" ]
+    paths:
+      - 'src/CarsUnlimited.Cart.API/**'
   pull_request:
     branches: [ "main" ]    
 
